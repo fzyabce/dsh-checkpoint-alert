@@ -1,0 +1,10 @@
+# 本机安装第三方插件用的 tarball 与来源说明（见 .plugin-src/PROVENANCE.md）——不随仓库分发
+.plugin-src/
+
+# 依赖与系统/编辑器噪声
+node_modules/
+*.log
+.DS_Store
+Thumbs.db
+
+# 注意：client.js 是构建产物，但**必须入库**（宿主按 ./client 导出加载它），不要忽略。

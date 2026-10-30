@@ -1,0 +1,11 @@
+# 统一换行：仓库内一律 LF，避免 Windows 克隆出 CRLF 让 client.js 与构建产物不一致
+* text=auto eol=lf
+
+# Windows 批处理必须是 CRLF
+*.cmd text eol=crlf
+*.bat text eol=crlf
+
+# 二进制
+*.tgz binary
+*.png binary
+*.ico binary

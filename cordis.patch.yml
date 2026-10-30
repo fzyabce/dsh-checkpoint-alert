@@ -1,0 +1,10 @@
+# dsh-human-alert 的 bundle 层：把插件挂进 profile 的配置树。
+#
+# 这一行由宿主在启动时按 bundle 层栈叠加进来；id 是稳定标识（后续层可用它覆盖
+# 本行 config），name 必须能被宿主按包名解析到 package.json#main。
+#
+# 注意：客户端半侧不在这里注册。宿主根据 package.json 里的 `dsh.client`
+# 自动把 `./client` 导出挂进 Web 启动表。
+- insert:
+    - id: dsh-human-alert
+      name: dsh-human-alert

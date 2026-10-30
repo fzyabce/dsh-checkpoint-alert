@@ -1,0 +1,85 @@
+{
+  "name": "dsh-human-alert",
+  "version": "0.3.0",
+  "description": "两类提醒（人工审批 / 任务完成）：右下角系统桌面通知 + 声音，DSH 最小化也可见；附独立开关、文案、日志与启动懒加载。",
+  "author": "fzyabce",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fzyabce/dsh-human-alert.git"
+  },
+  "homepage": "https://github.com/fzyabce/dsh-human-alert#readme",
+  "bugs": {
+    "url": "https://github.com/fzyabce/dsh-human-alert/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "notification",
+    "alert",
+    "approval"
+  ],
+  "type": "module",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    },
+    "./client": "./client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "client.js",
+    "src",
+    "lib",
+    "scripts",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md"
+  ],
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [],
+      "immediately": true
+    },
+    "plugin": {
+      "schemaVersion": 1,
+      "category": "devtools",
+      "displayName": {
+        "en": "Human Alert",
+        "zh-CN": "人工审批与任务完成提醒"
+      },
+      "summary": {
+        "en": "System tray-style desktop notifications plus sound for approvals and finished turns — visible even when DSH is minimized, each type with its own switch and copy.",
+        "zh-CN": "右下角系统桌面通知 + 声音：agent 等你审批、一轮任务跑完时提醒你，DSH 最小化也看得见；两类各自独立开关与文案。"
+      }
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.2",
+    "@deepseek-ai/dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
+  },
+  "scripts": {
+    "test": "node --test --test-isolation=none tests/defaults.test.mjs tests/fold.test.mjs tests/logbuf.test.mjs tests/host.test.mjs tests/client.test.mjs tests/integration.test.mjs",
+    "build": "node scripts/build-client.mjs",
+    "prepack": "node scripts/build-client.mjs"
+  },
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "packageManager": "pnpm@11.7.0",
+  "license": "MIT"
+}
