@@ -5,11 +5,11 @@
   "author": "fzyabce",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fzyabce/dsh-human-alert.git"
+    "url": "git+https://github.com/fzyabce/dsh-checkpoint-alert.git"
   },
-  "homepage": "https://github.com/fzyabce/dsh-human-alert#readme",
+  "homepage": "https://github.com/fzyabce/dsh-checkpoint-alert#readme",
   "bugs": {
-    "url": "https://github.com/fzyabce/dsh-human-alert/issues"
+    "url": "https://github.com/fzyabce/dsh-checkpoint-alert/issues"
   },
   "keywords": [
     "dsh",

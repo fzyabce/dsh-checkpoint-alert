@@ -16,7 +16,7 @@
 直接从这个仓库装（把 `<profile>` 换成你的 profile 名，桌面版默认是 `desktop`）：
 
 ```bash
-dsh plugin --profile <profile> add github:fzyabce/dsh-human-alert
+dsh plugin --profile <profile> add github:fzyabce/dsh-checkpoint-alert
 ```
 
 仓库里已经带构建好的 `client.js`，源码安装不需要额外跑构建、也不需要 `allowBuilds` 授权。
